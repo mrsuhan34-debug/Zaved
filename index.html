@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutri Nest | Premium Dry Fruits</title>
+  <meta name="description" content="Fresh, premium dry fruits and nuts delivered to your door. Almonds, cashews, pistachios, dates and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="logo">🌰 <span data-brand>Nutri Nest</span></a>
+      <nav class="menu" id="menu">
+        <a href="#products">Products</a>
+        <a href="#why">Why Us</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCart" aria-label="Open cart">
+          🛒 <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">100% Fresh &amp; Natural</span>
+          <h1>Premium dry fruits, <em>straight to your home.</em></h1>
+          <p>Hand-picked almonds, cashews, pistachios, dates and more. Quality you can taste, packed fresh and delivered fast.</p>
+          <div class="hero-cta">
+            <a href="#products" class="btn btn-primary">Shop Now</a>
+            <a href="#contact" class="btn btn-ghost">Bulk / Gift Orders</a>
+          </div>
+          <ul class="hero-points">
+            <li>✔ No preservatives</li>
+            <li>✔ Sealed packaging</li>
+            <li>✔ Home delivery</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bubble b1">🥜</div>
+          <div class="bubble b2">🌰</div>
+          <div class="bubble b3">🍇</div>
+          <div class="bubble b4">🌴</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <h2 class="title">Our Products</h2>
+        <p class="subtitle">Choose your favourites. Order directly on WhatsApp.</p>
+        <div class="filters" id="filters"></div>
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="why">
+      <div class="container">
+        <h2 class="title">Why Choose Us</h2>
+        <div class="features">
+          <div class="feature"><div class="icon">🌿</div><h3>Farm Fresh</h3><p>Sourced directly from trusted growers and suppliers.</p></div>
+          <div class="feature"><div class="icon">📦</div><h3>Hygienic Packing</h3><p>Air-tight packs to keep every nut crunchy and fresh.</p></div>
+          <div class="feature"><div class="icon">💰</div><h3>Fair Prices</h3><p>Premium quality without the premium markup.</p></div>
+          <div class="feature"><div class="icon">🚚</div><h3>Fast Delivery</h3><p>Quick doorstep delivery. Bulk and gift boxes available.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <div>
+          <h2 class="title left">Our Story</h2>
+          <p>We started with a simple idea: healthy snacking should be easy and trustworthy. Every batch is checked for freshness, taste and quality before it reaches you.</p>
+          <p>Whether it is a daily healthy snack, a festival gift box or a bulk order for your shop, we are here to help.</p>
+        </div>
+        <div class="stats">
+          <div><strong>500+</strong><span>Happy Customers</span></div>
+          <div><strong>15+</strong><span>Products</span></div>
+          <div><strong>100%</strong><span>Quality Check</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="contact">
+      <div class="container contact">
+        <h2 class="title">Get in Touch</h2>
+        <p class="subtitle">Questions, bulk orders or gift boxes? Message us.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" id="waLink" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+          <a class="btn btn-ghost" id="callLink">📞 Call Us</a>
+          <a class="btn btn-ghost" id="mailLink">✉️ Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span data-brand>Nutri Nest</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your Cart</h3>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">0</strong></div>
+      <input type="text" id="custName" placeholder="Your name" />
+      <input type="text" id="custAddress" placeholder="Delivery address" />
+      <button class="btn btn-primary full" id="checkout">Order on WhatsApp</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
